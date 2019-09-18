@@ -1,0 +1,37 @@
+.loadingWithCopy {
+	position: relative;
+	span {
+		color: @blue-100;
+		font-size: @font-size-large-deprecated;
+		display: block;
+		position: absolute;
+		margin:0;
+		padding:0;
+		top: 25%;
+		left:0;
+	}
+}
+
+.loading {
+	width: 2.5rem;
+	height: 2.5rem;
+	margin: 6.25rem auto;
+	background-color: @black-75;
+	border-radius: 100%;
+	animation: scaleout 1.0s infinite ease-in-out;
+
+	&.in-field {
+		margin-top: 0;
+		margin-bottom: 0;
+		background-color: @cyan-100;
+	}
+}
+
+@keyframes scaleout {
+	0% {
+		transform: scale(0.0);
+	} 100% {
+		transform: scale(1.0);
+		opacity: 0;
+  	}
+}

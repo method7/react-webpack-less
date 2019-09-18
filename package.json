@@ -1,0 +1,53 @@
+{
+  "name": "hello-world",
+  "version": "1.0.0",
+  "description": "CST test build",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server --open --mode development",
+    "build": "webpack --mode production"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.6.0",
+    "@babel/preset-env": "^7.6.0",
+    "@babel/preset-react": "^7.0.0",
+    "autoprefixer": "^9.6.1",
+    "babel-loader": "^8.0.6",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "postcss-loader": "^3.0.0",
+    "prop-types": "^15.7.2",
+    "webpack": "^4.40.1",
+    "webpack-cli": "^3.3.8",
+    "webpack-dev-server": "^3.8.0"
+  },
+  "dependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "css-font-loader": "^0.2.6",
+    "css-loader": "^3.2.0",
+    "file-loader": "^4.2.0",
+    "less": "^3.10.3",
+    "less-loader": "^5.0.0",
+    "precss": "^4.0.0",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-scripts": "^3.1.1",
+    "react-transition-group": "^4.3.0",
+    "style-loader": "^1.0.0",
+    "use-react-router": "^1.0.7"
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "browserslist": [
+    "last 2 version",
+    "not dead",
+    "iOS >= 9"
+  ]
+}

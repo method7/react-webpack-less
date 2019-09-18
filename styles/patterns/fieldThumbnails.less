@@ -1,0 +1,36 @@
+.field-thumbnails {
+	margin-bottom: 1rem;
+	border: @one-pixel solid @dark-grey-50;
+	border-width: 0 @one-pixel @one-pixel @one-pixel;
+
+	&:empty {
+		border-width: 0;
+	}
+
+	li {
+		background-color: @dark-grey-5;
+		background-repeat: no-repeat;
+		background-position: 50% 65%;
+		text-align: center;
+		position: relative;
+		min-height: 10rem;
+
+		&[class] {
+			padding-bottom: 6rem;
+		}
+
+		img {
+			display: block;
+			width: 100%;
+			max-width: 35rem;
+		}
+	}
+}
+
+@media only screen and (min-width: @step01) {
+	.field-thumbnails {
+		li {
+			min-height: 6rem;
+		}
+	}
+}

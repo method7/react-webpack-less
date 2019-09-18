@@ -1,0 +1,56 @@
+.ds-grouped {
+  border-style: solid;
+  border-color: @dark-grey-50;
+  border-width: @one-pixel @one-pixel 0 @one-pixel;
+
+  &:first-of-type {
+    margin-top: 1rem;
+    border-top-width: @one-pixel;
+    border-radius: @border-radius @border-radius 0 0;
+  }
+
+  &:last-of-type {
+    border-bottom-width: @one-pixel;
+    border-radius: 0 0 @border-radius @border-radius;
+  }
+
+  summary {
+    display: block;
+    text-decoration: none;
+    padding: 0.5rem 0.75rem 0.5rem 3rem;
+    font-family: @font-family-light;
+    font-size: @font-size-large-deprecated;
+    color: @blue-100;
+    background: transparent url("@{image-path}/accordion-closed.svg") no-repeat
+      1rem 50%;
+    border: @one-pixel solid transparent;
+
+    &:hover,
+    &:active {
+      background-color: @light-blue-10;
+      border-color: @light-blue-100;
+    }
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+  }
+
+  &[open] {
+    summary {
+      background-image: url("@{image-path}/accordion-open.svg");
+    }
+  }
+}
+
+@media only screen and (min-width: @step01) {
+  .ds-grouped {
+    summary {
+      font-size: @font-size-large-step-deprecated;
+    }
+
+    > div {
+      padding: 0 0.25rem;
+    }
+  }
+}

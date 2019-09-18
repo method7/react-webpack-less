@@ -1,0 +1,46 @@
+.clipboard {
+  max-width: @readability-max-width;
+
+  > div:not([role="alert"]) {
+    display: flex;
+    height: 2.25rem;
+  }
+
+  input {
+    flex: 4;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    margin-right: -1px;
+  }
+
+  button {
+    height: 100%;
+    margin: 0;
+    flex: 1;
+    border-radius: 0;
+    padding: 0;
+    background-image: url("@{image-path}/copy.svg");
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: 1rem;
+    min-width: 2rem;
+  }
+
+  [role="alert"] {
+    margin: 0;
+    padding: 0.5rem;
+    text-align: center;
+  }
+}
+
+@media only screen and (min-width: @step01) {
+  .clipboard {
+    input {
+      flex: 6;
+    }
+
+    button {
+      flex: 1;
+    }
+  }
+}

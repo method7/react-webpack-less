@@ -1,0 +1,15 @@
+.no-details-summary {
+
+	details {
+		display: block;
+		position: relative;
+
+		> div {
+			display: none;
+		}
+
+		&[open] > div {
+			display: block;
+		}
+	}
+}

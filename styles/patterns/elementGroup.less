@@ -1,0 +1,108 @@
+@media only screen and (min-width: @step02) {
+
+	.element-group {
+		overflow: hidden;
+		display: -webkit-flex;
+		display: flex;
+
+		li {
+			padding-right: 1rem;
+
+			&:last-of-type,
+			&:empty {
+				padding-right: 0;
+			}
+		}
+
+		&.width-control {
+
+			li {
+				overflow: hidden;
+				-webkit-flex: 1;
+				flex: 1;
+
+				&.overflow-visible {
+					overflow: visible;
+				}
+
+			  &.half {
+				-webkit-flex: none;
+				flex: none;
+				width: 50%;
+			  }
+
+			  &.third {
+				-webkit-flex: none;
+				flex: none;
+				width: 33.333333%;
+			  }
+
+			  &.quarter {
+				-webkit-flex: none;
+				flex: none;
+				width: 25%;
+			  }
+
+			  &.one-hundred-percent {
+				-webkit-flex: none;
+				flex: none;
+				width: 100%;
+			  }
+
+			  &.ninety-percent {
+				-webkit-flex: none;
+				flex: none;
+				width: 90%;
+			  }
+
+			  &.eighty-percent {
+				-webkit-flex: none;
+				flex: none;
+				width: 80%;
+			  }
+
+			  &.seventy-percent {
+				-webkit-flex: none;
+				flex: none;
+				width: 70%;
+			  }
+
+			  &.sixty-percent {
+				-webkit-flex: none;
+				flex: none;
+				width: 60%;
+			  }
+
+			  &.fifty-percent {
+				-webkit-flex: none;
+				flex: none;
+				width: 50%;
+			  }
+
+			  &.forty-percent {
+				-webkit-flex: none;
+				flex: none;
+				width: 40%;
+			  }
+
+			  &.thirty-percent {
+				-webkit-flex: none;
+				flex: none;
+				width: 30%;
+			  }
+
+			  &.twenty-percent {
+				-webkit-flex: none;
+				flex: none;
+				width: 20%;
+			  }
+
+			  &.ten-percent {
+				-webkit-flex: none;
+				flex: none;
+				width: 10%;
+			  }
+			}
+		}
+	}
+}

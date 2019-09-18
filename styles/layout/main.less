@@ -1,0 +1,16 @@
+[role=main] {
+	padding: 1rem 1rem;
+	max-width: @stepMax;
+	margin: 0 auto;
+
+	&.full-width {
+		max-width: 100%;
+	}
+}
+
+@media only screen and (min-width: @step01) {
+
+	[role=main] {
+		padding: 1rem 2rem;
+	}
+}

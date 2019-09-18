@@ -1,0 +1,38 @@
+.number-formatter {
+	.playback {
+		// font-size: @font-size-large-step-deprecated;
+		font-weight: @font-weight-bold;
+	}
+}
+
+.number-formatter {
+    .inputs {
+        position: relative;
+    }
+    input{
+        position: relative;
+        &[type=number] {
+            border: @px1 solid green;
+            position: absolute;
+            top: 0;
+            z-index: 0;
+            background-color: transparent;
+            height: 0;
+            background-color: @white;
+            &:focus {
+                height: auto;
+                z-index: 10;
+                padding: 0.57rem 0.5rem 0.5rem 0.75rem;
+				margin-top: -1px;
+            }
+        }
+    }
+    .playback {
+        &:extend(input);
+        position: relative;
+        z-index: 5;
+        font-size: @font-size-medium-deprecated;
+        font-weight: @font-weight-normal;
+        background-color: @white;   
+    }
+}

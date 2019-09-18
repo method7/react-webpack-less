@@ -1,0 +1,70 @@
+.multi {
+    font-size: @font-size-default;
+	background-color: @blue-10;
+	border: @one-pixel solid @blue-10;
+	border-radius: @border-radius;
+	cursor: pointer;
+	margin-bottom: 0.5rem;
+	padding: 0.75rem 1.65rem 0.75rem 1.25rem;
+	box-sizing: border-box;
+	position: relative;
+	min-width: @min-button-width;
+	color: @color-typography-body;
+
+	&.uneditable {
+		cursor: not-allowed;
+	}
+
+	span {
+		display: inline-block;
+		padding-left: 1.75rem;
+	}
+
+	&.selected {
+		background-color: @light-blue-100;
+		border: @one-pixel solid @light-blue-100;
+		color: @white;
+		a {
+			color: @white;
+		}
+	}
+
+	input {
+		position: absolute;
+		display: inline-block;
+		width: auto;
+		margin: 0.075rem 0 0 0;
+	}
+}
+
+@media only screen and (min-width: @step01) {
+
+	.multi {
+	  font-size: @font-size-default-step;
+	  display: inline-block;
+	  margin-right: 0.5rem;
+	  text-align: center;
+
+		&:last-of-type {
+			margin-right: 0;
+		}
+	}
+
+	.multi-list {
+
+		label {
+			display: table;
+            margin-bottom: 0.5rem;
+            text-align: left;
+		}
+	}
+    .multi-list-inline {
+
+		label {
+            display: inline-block;
+            margin-bottom: 0.5rem;
+            text-align: left;
+		}
+  	}
+}
+

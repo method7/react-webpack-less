@@ -1,0 +1,39 @@
+[role=grid] {
+	>div {
+		width: 100%;
+		float: left;
+		&:nth-child(even) ul {
+			background-color: @dark-grey-10
+		}
+		ul {
+			border: solid 1px @light-blue-100;
+			border-radius: 25px;
+			padding: 5%;
+			margin: 5%;
+		}
+	}
+}
+
+@media only screen and (min-width: 600px) {
+	[role=grid] {
+		>div {
+			width: 50%;
+		}
+	}
+}
+
+@media only screen and (min-width: @step02) {
+	[role=grid] {
+		>div {
+			width: 33.3%;
+		}
+	}
+}
+
+@media only screen and (min-width: @stepMax) {
+	[role=grid] {
+		>div {
+			width: 25%;
+		}
+	}
+}
