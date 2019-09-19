@@ -1,8 +1,18 @@
 # react-webpack-less
 
-#React webpack and less :-)
+#React, webpack, less and more :-)
 
-the beginnings of a react development framework nice
+The beginnings of a react development environment... nice
+
+- react
+- webpack
+- babel
+- react router
+- Less
+- postCss
+- autoPrefixer
+
+## Fire it up
 
 npm install
 npm start
