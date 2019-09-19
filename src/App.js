@@ -1,20 +1,37 @@
 import React, { Component } from "react";
 import Main from "./components/layout/main";
 import Header from "./components/elements/header";
-import Footer from "./components/layout/footer";
+import Footer from "./components/elements/footer";
 import Dialog from "./components/patterns/dialog";
 import "./App.less";
-import { StoryOne, StoryTwo, StoryThree } from "./components/stories";
+import { Home, StoryOne, StoryTwo, StoryThree } from "./components/stories";
 
 class App extends Component {
   state = {
     stories: [
-      { id: 0, title: "Story one", value: StoryOne },
-      { id: 1, title: "Story two", value: StoryTwo },
-      { id: 2, title: "Story three", value: StoryThree }
+      { id: 0, url: "/", title: "Home", value: Home },
+      { id: 1, url: "/one", title: "Story one", value: StoryOne },
+      { id: 2, url: "/two", title: "Story two", value: StoryTwo },
+      { id: 3, url: "/three", title: "Story three", value: StoryThree }
     ],
-    story: 0,
+    story: null,
     dialogOpen: true
+  };
+
+  componentDidMount() {
+    const activePage = this.state.stories.filter(obj => {
+      return obj.url === window.location.pathname;
+    });
+    if (activePage.length != 0) {
+      this.setState({
+        story: activePage[0].url
+      });
+    }
+  }
+
+  getStory = () => {
+    debugger;
+    return 0;
   };
 
   navigate = clicked => {

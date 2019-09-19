@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Nav, NavLink } from "react-router-dom";
 
 class Navigation extends Component {
   render() {
@@ -10,18 +11,20 @@ class Navigation extends Component {
           {stories.map(story => (
             <li
               key={story.id}
-              className={this.getClassName(readStory, story.id)}
+              className={readStory === story.url ? "selected" : ""}
             >
-              <a onClick={() => onNavigate(story.id)}>{story.title}</a>
+              <NavLink
+                exact={true}
+                to={story.url}
+                onClick={() => onNavigate(story.url)}
+              >
+                {story.title}
+              </NavLink>
             </li>
           ))}
         </ol>
       </nav>
     );
-  }
-
-  getClassName(readStory, id) {
-    return readStory === id ? "selected" : "";
   }
 }
 
