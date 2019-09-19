@@ -22,6 +22,11 @@ class Navigation extends Component {
               </NavLink>
             </li>
           ))}
+          <li>
+            <NavLink to="badURL" onClick={() => onNavigate("badURL")}>
+              404 page
+            </NavLink>
+          </li>
         </ol>
       </nav>
     );

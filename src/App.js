@@ -22,17 +22,13 @@ class App extends Component {
     const activePage = this.state.stories.filter(obj => {
       return obj.url === window.location.pathname;
     });
+
     if (activePage.length != 0) {
       this.setState({
         story: activePage[0].url
       });
     }
   }
-
-  getStory = () => {
-    debugger;
-    return 0;
-  };
 
   navigate = clicked => {
     this.setState({

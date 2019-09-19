@@ -15,4 +15,5 @@ The beginnings of a react development environment... nice
 ## Fire it up
 
 npm install
+
 npm start
