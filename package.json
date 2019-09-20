@@ -34,6 +34,7 @@
     "less-loader": "^5.0.0",
     "precss": "^4.0.0",
     "react": "^16.9.0",
+    "react-aria-modal": "^4.0.0",
     "react-dom": "^16.9.0",
     "react-router-dom": "^5.0.1",
     "react-scripts": "^3.1.1",

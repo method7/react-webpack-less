@@ -6,7 +6,7 @@ import Navigation from "../elements/navigation";
 
 class Main extends Component {
   render() {
-    const { stories, onNavigate, readStory } = this.props;
+    const { stories, onNavigate, readStory, setModalState } = this.props;
     return (
       <Router>
         <div role="main">
@@ -15,6 +15,7 @@ class Main extends Component {
               readStory={readStory}
               stories={stories}
               onNavigate={onNavigate}
+              setModalState={setModalState}
             />
           </div>
           <div className="column-2">

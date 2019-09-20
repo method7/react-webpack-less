@@ -8,9 +8,10 @@ The beginnings of a react development environment... nice
 - webpack
 - babel
 - react router
-- Less
+- less
 - postCss
 - autoPrefixer
+- react aria modal
 
 ## Fire it up
 

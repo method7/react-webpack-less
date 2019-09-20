@@ -3,7 +3,7 @@ import { Nav, NavLink } from "react-router-dom";
 
 class Navigation extends Component {
   render() {
-    const { stories, onNavigate, readStory } = this.props;
+    const { stories, onNavigate, readStory, setModalState } = this.props;
 
     return (
       <nav role="navigation" className="navigation-lhs">
@@ -26,6 +26,24 @@ class Navigation extends Component {
             <NavLink to="badURL" onClick={() => onNavigate("badURL")}>
               404 page
             </NavLink>
+          </li>
+          <li>
+            <a
+              onClick={() => {
+                setModalState(true);
+              }}
+            >
+              activate Welcome modal
+            </a>
+          </li>
+          <li>
+            <a
+              onClick={() => {
+                setModalState(true, "goodBye");
+              }}
+            >
+              activate Good Bye modal
+            </a>
           </li>
         </ol>
       </nav>
