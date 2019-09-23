@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Route, Switch } from "react-router-dom";
-import { Home, StoryOne, StoryTwo, StoryThree, ErrorPage } from "../stories";
+import { Home, StoryOne, StoryTwo, StoryThree, ErrorPage } from ".";
 
 class GetStory extends Component {
   render() {

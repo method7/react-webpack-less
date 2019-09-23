@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 import GetStory from "../stories/getStory";
-
 import Navigation from "../elements/navigation";
 
 class Main extends Component {

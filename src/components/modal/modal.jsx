@@ -1,7 +1,6 @@
-import Welcome from "../modal/welcome";
-import GoodBye from "../modal/goodBye";
+import { Welcome, GoodBye } from ".";
 import React, { Component } from "react";
-import AriaModal from "../../../node_modules/react-aria-modal";
+import AriaModal from "react-aria-modal";
 
 class Modal extends React.Component {
   constructor(props) {
@@ -14,7 +13,7 @@ class Modal extends React.Component {
     goodBye: GoodBye
   };
   render() {
-    const { Content, modalActive } = this.props;
+    const { modalActive } = this.props;
 
     let dialogContentClass = "modal modal--animated";
     let underlayClass = "underlay";
@@ -38,7 +37,6 @@ class Modal extends React.Component {
         >
           <div className={dialogContentClass}>
             <TagName />
-            {/* <Welcome /> */}
             <footer className="modal-footer">
               <button role="button" onClick={this.deactivateModal}>
                 deactivate modal

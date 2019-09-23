@@ -1,10 +1,8 @@
 import React, { Component } from "react";
-import Modal from "./components/patterns/modal";
-import GetModal from "./components/modal/getModal";
+import Modal from "./components/modal/modal";
 import Main from "./components/layout/main";
 import Header from "./components/elements/header";
 import Footer from "./components/elements/footer";
-import Welcome from "./components/modal/welcome";
 import "./App.less";
 import { Home, StoryOne, StoryTwo, StoryThree } from "./components/stories";
 
