@@ -28,22 +28,26 @@ class Navigation extends Component {
             </NavLink>
           </li>
           <li>
-            <a
+            <button
+              role="button"
               onClick={() => {
                 setModalState(true);
+                return false;
               }}
             >
               activate Welcome modal
-            </a>
+            </button>
           </li>
           <li>
-            <a
+            <button
+              type="button"
               onClick={() => {
                 setModalState(true, "goodBye");
+                return false;
               }}
             >
               activate Good Bye modal
-            </a>
+            </button>
           </li>
         </ol>
       </nav>

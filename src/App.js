@@ -3,7 +3,7 @@ import Modal from "./components/modal/modal";
 import Main from "./components/layout/main";
 import Header from "./components/elements/header";
 import Footer from "./components/elements/footer";
-import "./App.less";
+import "../styles/App.less";
 import { Home, StoryOne, StoryTwo, StoryThree } from "./components/stories";
 
 class App extends Component {
