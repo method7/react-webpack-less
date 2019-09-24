@@ -8,7 +8,25 @@ class Main extends Component {
     const { stories, onNavigate, readStory, setModalState } = this.props;
     return (
       <Router>
-        <div role="main">
+        <div role="main" class="example-row">
+          <div class="example-content-main">
+            <section>
+              <div className="page">
+                <GetStory />
+              </div>
+            </section>
+          </div>
+          <div class="example-content-secondary">
+            <Navigation
+              readStory={readStory}
+              stories={stories}
+              onNavigate={onNavigate}
+              setModalState={setModalState}
+            />
+          </div>
+        </div>
+
+        {/* <div role="main">
           <div className="column-1">
             <Navigation
               readStory={readStory}
@@ -24,7 +42,7 @@ class Main extends Component {
               </div>
             </section>
           </div>
-        </div>
+        </div> */}
       </Router>
     );
   }

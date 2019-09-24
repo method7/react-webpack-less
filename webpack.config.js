@@ -12,9 +12,15 @@ module.exports = {
         ]
       },
       {
-        test: /\.(css||less)$/,
+        test: /\.(css||less||scss)$/,
         exclude: /node_modules/,
-        use: ["style-loader", "css-loader", "postcss-loader", "less-loader"]
+        use: [
+          "style-loader",
+          "css-loader",
+          "postcss-loader",
+          "less-loader",
+          "sass-loader"
+        ]
       },
       {
         test: /\.html$/,
