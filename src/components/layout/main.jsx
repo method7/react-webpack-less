@@ -1,31 +1,44 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router } from "react-router-dom";
-import GetStory from "../stories/getStory";
-import Navigation from "../elements/navigation";
+import MainElements from "./mainElememts";
+import * as util from "../utils.js";
 
 class Main extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      story: null,
+      stories: util.myStories()
+    };
+  }
+
+  componentDidMount() {
+    const activePage = this.state.stories.filter(obj => {
+      return obj.url === window.location.pathname;
+    });
+
+    if (activePage.length != 0) {
+      this.setState({
+        story: activePage[0].url
+      });
+    }
+  }
+
+  navigate = clicked => {
+    this.setState({
+      story: clicked
+    });
+  };
+
   render() {
-    const { stories, onNavigate, readStory, setModalState } = this.props;
+    const { setModalState } = this.props;
     return (
-      <Router>
-        <div role="main">
-          <div className="column-1">
-            <Navigation
-              readStory={readStory}
-              stories={stories}
-              onNavigate={onNavigate}
-              setModalState={setModalState}
-            />
-          </div>
-          <div className="column-2">
-            <section>
-              <div className="page">
-                <GetStory />
-              </div>
-            </section>
-          </div>
-        </div>
-      </Router>
+      <MainElements
+        readStory={this.state.story}
+        stories={this.state.stories}
+        onNavigate={this.navigate}
+        setModalState={setModalState}
+      />
     );
   }
 }

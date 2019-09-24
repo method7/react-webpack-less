@@ -47,6 +47,7 @@ class Modal extends React.Component {
       </div>
     );
   }
+
   deactivateModal = () => {
     this.setState(
       {
