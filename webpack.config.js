@@ -12,9 +12,31 @@ module.exports = {
         ]
       },
       {
-        test: /\.(css||less)$/,
+        test: /\.less$/,
         exclude: /node_modules/,
-        use: ["style-loader", "css-loader", "postcss-loader", "less-loader"]
+        use: [
+          {
+            loader: "style-loader"
+          },
+          {
+            loader: "css-loader",
+            options: {
+              sourceMap: true
+            }
+          },
+          {
+            loader: "postcss-loader",
+            options: {
+              sourceMap: true
+            }
+          },
+          {
+            loader: "less-loader",
+            options: {
+              sourceMap: true
+            }
+          }
+        ]
       },
       {
         test: /\.html$/,
@@ -33,9 +55,15 @@ module.exports = {
       }
     ]
   },
+  devtool: "inline-source-map",
   output: {
     filename: "index.js",
     publicPath: "/"
+  },
+  optimization: {
+    splitChunks: {
+      chunks: "all"
+    }
   },
   devServer: { historyApiFallback: true },
   resolve: {
