@@ -10,9 +10,6 @@ class Header extends Component {
       <header role="banner">
         <div>Method7</div>
         <div>M7 React Header</div>
-        <div>
-          <a href="/logout">Logout</a>
-        </div>
       </header>
     );
   }
