@@ -20,7 +20,6 @@ class MainElements extends Component {
           <div className="column-2">
             <section>
               <div className="page">
-                BANG
                 <GetStory />
               </div>
             </section>
