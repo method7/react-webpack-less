@@ -3,12 +3,15 @@ const common = require("./webpack.common.js");
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const path = require("path");
 
 module.exports = merge(common, {
   mode: "production",
+  entry: "./src/index.js",
   output: {
-    filename: "index.js",
-    publicPath: "/"
+    filename: "[name].bundle.js",
+    path: path.resolve(__dirname, "dist")
   },
   optimization: {
     minimizer: [
@@ -24,6 +27,7 @@ module.exports = merge(common, {
     }
   },
   plugins: [
+    new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
       filename: "index.min.css"
     })
