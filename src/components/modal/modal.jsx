@@ -1,6 +1,7 @@
 import { Welcome, GoodBye } from ".";
-import React, { Component } from "react";
+import React from "react";
 import AriaModal from "react-aria-modal";
+import PropTypes from 'prop-types';
 
 class Modal extends React.Component {
   constructor(props) {
@@ -46,6 +47,13 @@ class Modal extends React.Component {
         </AriaModal>
       </div>
     );
+  }
+
+  propTypes = {
+    stories: PropTypes.array,
+    modalActive: PropTypes.bool,
+    Content: PropTypes.string,
+    setModalState: PropTypes.func
   }
 
   deactivateModal = () => {

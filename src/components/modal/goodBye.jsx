@@ -1,4 +1,4 @@
-const React = require("react");
+import React from "react";
 
 class Goodbye extends React.Component {
   render() {

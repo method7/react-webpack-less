@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import MainElements from "./mainElememts";
 import * as util from "../utils.js";
+import PropTypes from 'prop-types';
 
 class Main extends Component {
   constructor(props) {
@@ -40,6 +41,9 @@ class Main extends Component {
         setModalState={setModalState}
       />
     );
+  }
+  propTypes = {
+    setModalState: PropTypes.func
   }
 }
 

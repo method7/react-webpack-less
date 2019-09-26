@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
+import PropTypes from 'prop-types';
 
 class Navigation extends Component {
   render() {
@@ -50,6 +51,12 @@ class Navigation extends Component {
         </ol>
       </nav>
     );
+  }
+  propTypes = {
+    stories: PropTypes.array,
+    onNavigate: PropTypes.func,
+    readStory: PropTypes.number,
+    setModalState: PropTypes.func
   }
 }
 

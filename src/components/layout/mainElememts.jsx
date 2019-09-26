@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 import GetStory from "../stories/getStory";
 import Navigation from "../elements/navigation";
+import PropTypes from 'prop-types';
 
 class MainElements extends Component {
   render() {
@@ -27,6 +28,12 @@ class MainElements extends Component {
         </div>
       </Router>
     );
+  }
+  propTypes = {
+    stories: PropTypes.array,
+    onNavigate: PropTypes.func,
+    readStory: PropTypes.number,
+    setModalState: PropTypes.func
   }
 }
 
