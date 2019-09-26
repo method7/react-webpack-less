@@ -31,6 +31,22 @@ module.exports = merge(common, {
   module: {
     rules: [
       {
+        test: /\.(svg|png)(\?v=\d+\.\d+\.\d+)?$/,
+        loader: "file-loader",
+        options: {
+          // name: "[path][name].[ext]"
+          outputPath: "assets/images"
+        }
+      },
+      {
+        test: /\.(woff(2)?|ttf|eot)(\?v=\d+\.\d+\.\d+)?$/,
+        loader: "file-loader",
+        options: {
+          // name: "[path][name].[ext]"
+          outputPath: "assets/fonts"
+        }
+      },
+      {
         test: /\.less$/,
         use: [
           MiniCssExtractPlugin.loader,

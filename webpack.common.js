@@ -4,14 +4,6 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(woff(2)?|ttf|eot|svg|png)(\?v=\d+\.\d+\.\d+)?$/,
-        use: [
-          {
-            loader: "file-loader"
-          }
-        ]
-      },
-      {
         test: /\.html$/,
         use: [
           {

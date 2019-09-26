@@ -8,6 +8,14 @@ module.exports = merge(common, {
   module: {
     rules: [
       {
+        test: /\.(woff(2)?|ttf|eot|svg|png)(\?v=\d+\.\d+\.\d+)?$/,
+        use: [
+          {
+            loader: "file-loader"
+          }
+        ]
+      },
+      {
         test: /\.less$/,
         exclude: /node_modules/,
         use: [
