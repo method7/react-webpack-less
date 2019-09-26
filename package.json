@@ -6,7 +6,8 @@
   "scripts": {
     "test": "react-scripts test",
     "start": "webpack-dev-server --open --config webpack.dev.js",
-    "build": "webpack --config webpack.prod.js"
+    "build": "webpack --config webpack.prod.js",
+    "lint": "eslint src/**/*.js src/**/*.jsx"
   },
   "keywords": [],
   "author": "",
@@ -16,8 +17,11 @@
     "@babel/preset-env": "^7.6.0",
     "@babel/preset-react": "^7.0.0",
     "autoprefixer": "^9.6.1",
+    "babel-eslint": "^10.0.3",
     "babel-loader": "^8.0.6",
     "clean-webpack-plugin": "^3.0.0",
+    "eslint-loader": "^3.0.1",
+    "eslint-plugin-react": "^7.14.3",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
     "mini-css-extract-plugin": "^0.8.0",
