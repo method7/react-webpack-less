@@ -12,6 +12,11 @@ The beginnings of a react development environment... nice
 - postCss
 - autoPrefixer
 - react aria modal
+- tests with react-scripts
+
+## TODO
+
+Jasmine tests ? https://jsfiddle.net/dposin/v1Ls8L1g/
 
 ## Fire it up
 
