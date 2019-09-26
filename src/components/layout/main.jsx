@@ -8,7 +8,7 @@ class Main extends Component {
     super(props);
 
     this.state = {
-      story: null,
+      story: 'home',
       stories: util.myStories()
     };
   }
@@ -42,9 +42,10 @@ class Main extends Component {
       />
     );
   }
-  propTypes = {
-    setModalState: PropTypes.func
-  }
+
 }
 
+Main.propTypes = {
+  setModalState: PropTypes.func.isRequired
+}
 export default Main;

@@ -52,12 +52,14 @@ class Navigation extends Component {
       </nav>
     );
   }
-  propTypes = {
-    stories: PropTypes.array,
-    onNavigate: PropTypes.func,
-    readStory: PropTypes.number,
-    setModalState: PropTypes.func
-  }
+
+}
+
+Navigation.propTypes = {
+  stories: PropTypes.array.isRequired,
+  onNavigate: PropTypes.func.isRequired,
+  readStory: PropTypes.string.isRequired,
+  setModalState: PropTypes.func.isRequired
 }
 
 export default Navigation;

@@ -29,12 +29,14 @@ class MainElements extends Component {
       </Router>
     );
   }
-  propTypes = {
-    stories: PropTypes.array,
-    onNavigate: PropTypes.func,
-    readStory: PropTypes.number,
-    setModalState: PropTypes.func
-  }
+
+}
+
+MainElements.propTypes = {
+  stories: PropTypes.array.isRequired,
+  onNavigate: PropTypes.func.isRequired,
+  readStory: PropTypes.string.isRequired,
+  setModalState: PropTypes.func.isRequired
 }
 
 export default MainElements;

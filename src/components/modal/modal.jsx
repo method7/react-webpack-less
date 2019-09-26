@@ -49,13 +49,6 @@ class Modal extends React.Component {
     );
   }
 
-  propTypes = {
-    stories: PropTypes.array,
-    modalActive: PropTypes.bool,
-    Content: PropTypes.string,
-    setModalState: PropTypes.func
-  }
-
   deactivateModal = () => {
     this.setState(
       {
@@ -72,6 +65,12 @@ class Modal extends React.Component {
   onModalEnter = () => {
     this.setState({ modalHasEntered: true });
   };
+}
+
+Modal.propTypes = {
+  modalActive: PropTypes.bool.isRequired,
+  Content: PropTypes.string,
+  setModalState: PropTypes.func.isRequired
 }
 
 export default Modal;
